@@ -19,3 +19,38 @@
 #Player one's lowest number is 1 at index 4
 #Player two's lowest number is 1 at index 5
 
+import random
+
+POne = [random.randint(1, 50) for _ in range(10)]
+PTwo = [random.randint(1, 50) for _ in range(10)]
+
+POneW = 0
+PTwoW = 0
+
+for i in range(10):
+    if POne[i] > PTwo[i]:
+        POneW += 1
+    elif POne[i] < PTwo[i]:
+        PTwoW += 1
+
+HOne = max(POne)
+LOne = min(POne)
+HOneI = POne.index(HOne)
+LOneI = POne.index(LOne)
+
+HTwo = max(PTwo)
+LTwo = min(PTwo)
+HTwoI = PTwo.index(HTwo)
+LTwoI = PTwo.index(LTwo)
+
+print(f"Player One = {POne}")
+print(f"Player One = {PTwo}")
+
+print(f"Player one won {POneW} times")
+print(f"Player two won {PTwoW} times")
+
+print(f"Player one's highest number is {HOne} at {HOneI}")
+print(f"Player two's highest number is {HTwo} at {HTwoI}")
+
+print(f"Player one's lowest number is {LOne} at {LOneI}")
+print(f"Player two's lowest number is {LTwo} at {LTwoI}")
