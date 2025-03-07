@@ -18,3 +18,4 @@
 #Player two's highest number is 8 at index 1
 #Player one's lowest number is 1 at index 4
 #Player two's lowest number is 1 at index 5
+
